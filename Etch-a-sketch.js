@@ -10,10 +10,18 @@ function squares(size = 16){
     for(i=0; i < size*size; i++){
         const div = document.createElement('div');
         div.id = 'square';
-        div.addEventListener("mouseover", ()=> {div.classList.toggle('color');}, false )
+        div.addEventListener("mouseover", changeColor )
         container.appendChild(div);
         
         
     }
 };
 squares();
+
+function changeColor(e){
+    let randomR = Math.floor(Math.random() * 256);
+    let randomG = Math.floor(Math.random() * 256);
+    let randomB = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG},${randomB})`;
+
+};
