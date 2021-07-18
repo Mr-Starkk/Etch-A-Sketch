@@ -5,15 +5,32 @@
         <title>
             Etch-A-Sketch
         </title>
+        <script src="Etch-a-sketch.js" defer></script>
     </head>
-    <body background="bg.jpg">
-        
-        <p><h1 id="heading">Etch-A-Sketch</h1></p>
-        <button id="change-size" onclick = "area()" >Change Size</button>
-        <div id="container">
-            
-        </div>
 
-        <script src="Etch-a-sketch.js"></script>
+    <body>
+        <div id="wrapper">
+            <div id="main-container"></div>
+            <div id="sidebar">
+                <div>
+                     <input id="pen-color" type="color" value = "#ffff00"> Pen-Color
+                </div>
+                <div>
+                    <input id= "background-color" type="color" value = "#ff0099">Background
+                </div>
+                <div>
+                    <input type="range" id="square-range-slider" min="1" max="100" value="32" step="1">
+                    <p id="range-slider-container">   Grid-Size : 32   </p>   
+                </div>
+                <div>
+                    <button id="grid-border">Toggle Border</button>
+                </div>
+                <div> 
+                    <button id= "clear-button"> Clear</button>
+                </div>    
+            </div>
+        </div>  
+        <!-- <button id="clearSquares"> Clear </button> -->
+        <!-- <input type="range" value="24" min="4" max="100"> -->
     </body>
 </html>
