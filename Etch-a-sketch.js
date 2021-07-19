@@ -41,7 +41,6 @@ addHoverEffect();
         })
 
         toggleBorder.addEventListener('click', (e) => {
-            console.log(mainContainerSquares)
             mainContainerSquares.forEach((square) => {
                 if(square.style.border == '1px solid transparent'){
                     square.style.borderBottom = '1px solid rgb(97, 97, 97)';
