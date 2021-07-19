@@ -3,9 +3,31 @@ const eraseButton = document.getElementById('clear-button');
 const rangeSlider = document.getElementById('square-range-slider');
 const rangeSliderContainer = document.getElementById('range-slider-container');
 createGrid();
-const mainContainerSquares = document.querySelectorAll('#innersquares');
+let mainContainerSquares = document.querySelectorAll('#innersquares');
+addHoverEffect();
+const penColor = document.getElementById('pen-color');
 
+        penColor.addEventListener('input', (e) => {
+            console.log(e.target.value);
+            removeHoverEffect();
+            
+        })
 
+        eraseButton.addEventListener('click', () => {
+            // removeHoverEffect();
+            clearGrid();
+            createGrid();
+            addHoverEffect();
+            rangeSlider.valueAsNumber = 32;
+            rangeSliderContainer.textContent= ` Grid-Size : ${rangeSlider.valueAsNumber} `;
+        });
+
+        rangeSlider.addEventListener('change', () => {
+            clearGrid();
+            createGrid(rangeSlider.valueAsNumber);
+            addHoverEffect();
+            rangeSliderContainer.textContent= ` Grid-Size : ${rangeSlider.valueAsNumber} `;
+        });
 
 
 
@@ -19,11 +41,24 @@ function createGrid(squares = 32){
     }
 }
 
+
+function addHoverEffect(){
+    mainContainerSquares = document.querySelectorAll('#innersquares');
     mainContainerSquares.forEach((square) => {
-    square.addEventListener('mouseover', changeColor);
+        square.addEventListener('mouseover', changeColor);
     });
+}
+
+function removeHoverEffect(){
+    mainContainerSquares = document.querySelectorAll('#innersquares');
+    mainContainerSquares.forEach((square) => {
+        square.removeEventListener('mouseover', changeColor);
+    });
+}
+
 
 function changeColor(e){
+
     let randomR = Math.floor(Math.random() * 256);
     let randomG = Math.floor(Math.random() * 256);
     let randomB = Math.floor(Math.random() * 256);
@@ -34,14 +69,3 @@ function changeColor(e){
 function clearGrid(){
     mainContainer.innerHTML = "";
 }
-    eraseButton.addEventListener('click', () => {
-        clearGrid();
-        createGrid();
-    });
-
-rangeSlider.addEventListener('change', () => {
-        clearGrid();
-        createGrid(rangeSlider.valueAsNumber);
-        colorChangeOnHover();
-        rangeSliderContainer.textContent= ` Grid-Size : ${rangeSlider.valueAsNumber} `;
-    });
