@@ -1,3 +1,8 @@
+html{
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
 body{
     background: radial-gradient( rgb(148, 147, 140),rgb(245, 241, 241), rgb(148, 147, 140)) 
 }
@@ -36,6 +41,7 @@ body{
 }
 
 #main-container{
+    background: rgb(240,240,240);
     display: grid;
     margin-top: 3%;
     border: 6px double rgb(10, 95, 175);
@@ -58,9 +64,9 @@ body{
 } */
 
 #innersquares{
-    background: rgb(226, 221, 220);
-    border-bottom: 1px solid rgb(97, 97, 97) !important;
-    border-right: 1px solid rgb(97, 97, 97) !important;
+    /* background: rgb(226, 221, 220); */
+    border-bottom: 1px solid rgb(97, 97, 97);
+    border-right: 1px solid rgb(97, 97, 97);
 }
 button {
     border: none;
@@ -78,7 +84,8 @@ button {
 #clear-button {
     background-color: white; 
     color: black; 
-    font-weight: 600;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
     border: 3px solid #008CBA;
   }
   
@@ -87,7 +94,9 @@ button {
     color: white;
   }
 #grid-border{
-    padding: 16px 20px;
+    /* padding: 16px 20px; */
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
     background-color: white;
     color: black;
     border: 3px solid green;
