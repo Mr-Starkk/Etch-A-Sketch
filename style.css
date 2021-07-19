@@ -17,7 +17,7 @@ body{
     border-radius: 10px;
     border: 4px dotted rgb(12, 106, 134);
     width: 200px;
-    margin-top: 20px;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     transition:  0.3s linear;
@@ -37,14 +37,14 @@ body{
 
 #main-container{
     display: grid;
-    margin-top: 5%;
+    margin-top: 3%;
     border: 6px double rgb(10, 95, 175);
     border-radius: 6px;
     min-height: 550px;
     min-width: 550px;
     max-width: 550px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 30px;
     /* justify-content: stretch; */
     align-content: stretch;
     transition:  0.5s linear;
