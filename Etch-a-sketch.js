@@ -24,6 +24,15 @@ const penColor = document.getElementById('pen-color');
             rangeSliderContainer.textContent= ` Grid-Size : ${rangeSlider.valueAsNumber} `;
         });
 
+        penColor.addEventListener('input', (e) => {
+            const selectedColor = e.target.value;
+            removeHoverEffect();
+            mainContainerSquares = document.querySelectorAll('#innersquares');
+            mainContainerSquares.forEach((square) => {
+                square.addEventListener('mouseover', (e) => addPenColor(e,selectedColor));
+            });
+            
+        })
         
         
         function createGrid(squares = 32){
@@ -66,16 +75,6 @@ function clearGrid(){
     mainContainer.innerHTML = "";
 }
 
-
-        penColor.addEventListener('input', (e) => {
-            const selectedColor = e.target.value;
-            removeHoverEffect();
-            mainContainerSquares = document.querySelectorAll('#innersquares');
-            mainContainerSquares.forEach((square) => {
-                square.addEventListener('mouseover', addPenColor);
-            });
-            
-        })
 
 function addPenColor(e, selectedColor){
     e.target.style.background =  `${selectedColor}`;
