@@ -1,47 +1,44 @@
-html{
+html {
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
 }
 
-body{
-    background: radial-gradient( rgb(148, 147, 140),rgb(245, 241, 241), rgb(148, 147, 140)) 
+body {
+    background: radial-gradient(rgb(148, 147, 140), rgb(245, 241, 241), rgb(148, 147, 140))
 }
 
-#wrapper{
+#wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-around;
 }
 
-#sidebar{
+#sidebar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: #6e6974;
     border-radius: 10px;
     border: 4px dotted rgb(12, 106, 134);
-    width: 200px;
     margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    transition:  0.3s linear;
+    transition: 0.3s linear;
 }
-#sidebar:hover{
+
+#sidebar:hover {
     transform: scale(1.01);
     zoom: 108%;
 }
 
-#sidebar > div{
+#sidebar>div {
     margin: 20px;
 }
 
-#sidebar > div[id *= color]{
+#sidebar>div[id *=color] {
     margin-left: 20px;
 }
 
-#main-container{
-    background: rgb(240,240,240);
+#main-container {
+    background: rgb(240, 240, 240);
     display: grid;
     margin-top: 3%;
     border: 6px double rgb(10, 95, 175);
@@ -49,11 +46,8 @@ body{
     min-height: 550px;
     min-width: 550px;
     max-width: 550px;
-    margin-left: auto;
-    margin-right: 30px;
-    /* justify-content: stretch; */
     align-content: stretch;
-    transition:  0.5s linear;
+    transition: 0.5s linear;
     /* grid-template-columns: repeat(24, auto); */
     /* grid-template-rows: repeat(23, auto); */
     /* background: rgb(30, 120, 204); */
@@ -63,11 +57,12 @@ body{
     transform: scale(1.05);
 } */
 
-#innersquares{
+#innersquares {
     /* background: rgb(226, 221, 220); */
     border-bottom: 1px solid rgb(97, 97, 97);
     border-right: 1px solid rgb(97, 97, 97);
 }
+
 button {
     border: none;
     color: white;
@@ -79,21 +74,22 @@ button {
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-  }
+}
 
 #clear-button {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
     border: 3px solid #008CBA;
-  }
-  
+}
+
 #clear-button:hover {
     background-color: #008CBA;
     color: white;
-  }
-#grid-border{
+}
+
+#grid-border {
     /* padding: 16px 20px; */
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
@@ -101,13 +97,16 @@ button {
     color: black;
     border: 3px solid green;
 }
-#grid-border:hover{
+
+#grid-border:hover {
     background-color: green;
     color: white;
 }
-#pen-color{
+
+#pen-color {
     margin-right: 5px;
 }
-#background-color{
+
+#background-color {
     margin-right: 5px;
 }
