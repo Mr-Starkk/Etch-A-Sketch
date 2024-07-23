@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Tourney:wght@600&display=swap');
-        </style>
-        <link rel="icon" href="favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-        <title>
-            Etch-A-Sketch
-        </title>
-        <script src="Etch-a-sketch.js" defer></script>
-    </head>
 
-    <body>
-        <div id="wrapper">
-            <div id="main-container"></div>
-            <div id="sidebar">
-                <div>
-                     <input id="pen-color" type="color" value = "#ffff00"> Pen-Color
-                </div>
-                <div>
-                    <input id= "background-color" type="color" value = "#ff0099">Background
-                </div>
-                <div>
-                    <input type="range" id="square-range-slider" min="1" max="100" value="32" step="1">
-                    <p id="range-slider-container">   Grid-Size : 32   </p>   
-                </div>
-                <div>
-                    <button id="grid-border">Toggle Border</button>
-                </div>
-                <div> 
-                    <button id= "clear-button"> Clear</button>
-                </div>    
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Tourney:wght@600&display=swap');
+    </style>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Etch-A-Sketch
+    </title>
+    <script src="Etch-a-sketch.js" defer></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main-container"></div>
+        <div id="sidebar">
+            <div>
+                <input id="pen-color" type="color" value="#ffff00"> Pen-Color
             </div>
-        </div>  
-        <!-- <button id="clearSquares"> Clear </button> -->
-        <!-- <input type="range" value="24" min="4" max="100"> -->
-    </body>
+            <div>
+                <input id="background-color" type="color" value="#ff0099">Background
+            </div>
+            <div>
+                <input type="range" id="square-range-slider" min="1" max="100" value="32" step="1">
+                <p id="range-slider-container"> Grid-Size : 32 </p>
+            </div>
+            <div>
+                <button id="grid-border">Toggle Shade</button>
+            </div>
+            <div>
+                <button id="clear-button"> Clear</button>
+            </div>
+        </div>
+    </div>
+    <!-- <button id="clearSquares"> Clear </button> -->
+    <!-- <input type="range" value="24" min="4" max="100"> -->
+</body>
+
 </html>

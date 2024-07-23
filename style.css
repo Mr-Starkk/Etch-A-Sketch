@@ -4,10 +4,16 @@ html {
 }
 
 body {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     background: radial-gradient(rgb(148, 147, 140), rgb(245, 241, 241), rgb(148, 147, 140))
 }
 
 #wrapper {
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -37,31 +43,27 @@ body {
     margin-left: 20px;
 }
 
+
 #main-container {
-    background: rgb(240, 240, 240);
-    display: grid;
-    margin-top: 3%;
-    border: 6px double rgb(10, 95, 175);
-    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
     min-height: 550px;
     min-width: 550px;
     max-width: 550px;
-    align-content: stretch;
+    border: 6px double rgb(10, 95, 175);
+    border-radius: 6px;
     transition: 0.5s linear;
-    /* grid-template-columns: repeat(24, auto); */
-    /* grid-template-rows: repeat(23, auto); */
-    /* background: rgb(30, 120, 204); */
 }
-
-/* #main-container:hover{
-    transform: scale(1.05);
-} */
 
 #innersquares {
-    /* background: rgb(226, 221, 220); */
-    border-bottom: 1px solid rgb(97, 97, 97);
-    border-right: 1px solid rgb(97, 97, 97);
+    flex-grow: 1;
+    flex-shrink: 0;
+    border: 0px solid salmon;
+    opacity: 100%;
 }
+
+
+
 
 button {
     border: none;
